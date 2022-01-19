@@ -1,5 +1,5 @@
 {
-  "name": "react-google-apps-script",
+  "name": "gslides-plugin",
   "version": "2.0.0",
   "description": "Starter project for using React with Google Apps Script",
   "repository": {
@@ -9,7 +9,7 @@
   "scripts": {
     "test": "test",
     "login": "clasp login",
-    "setup": "rimraf .clasp.json && clasp create --type sheets --title \"My React Project\" --rootDir ./dist",
+    "setup": "rimraf .clasp.json && clasp create --type slides --title \"My React Project\" --rootDir ./dist",
     "open": "clasp open --addon",
     "setup:https": "mkdirp certs && mkcert -key-file ./certs/key.pem -cert-file ./certs/cert.pem localhost 127.0.0.1",
     "build:dev": "cross-env NODE_ENV=development webpack",
@@ -23,10 +23,9 @@
     "react",
     "google",
     "apps",
-    "script",
-    "sheets"
+    "script"
   ],
-  "author": "Elisha Nuchi",
+  "author": "Igor Shcherba",
   "license": "MIT",
   "engines": {
     "node": ">=10.0.0",
@@ -36,9 +35,7 @@
     "gas-client": "^0.2.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
-    "react-bootstrap": "^1.3.0",
-    "react-dom": "^17.0.2",
-    "react-transition-group": "^4.4.1"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
