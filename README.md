@@ -1,24 +1,18 @@
-<p align="center">
-  <a href="" rel="noopener">
- <img width="400" src="https://i.imgur.com/83Y7bWN.png" alt="React & Google Apps Script logos"></a>
-</p>
-
-<p align="center"> This project is for developing React app inside Google Slides. It's created based on this [template](https://github.com/enuchi/React-Google-Apps-Script).
-</p>
+This project is for developing a React app inside Google Slides. It's created based on this [template](https://github.com/enuchi/React-Google-Apps-Script).
 
 ---
 
-## 📝 Table of Contents
+## Table of Contents
 
-- [📝 Table of Contents](#-table-of-contents)
+- [Table of Contents](#table-of-contents)
 - [Install <a name = "install"></a>](#install-)
   - [Prerequisites <a name = "prerequisites"></a>](#prerequisites-)
   - [Getting started <a name = "getting-started"></a>](#getting-started-)
 - [Deploy <a name = "deploy"></a>](#deploy-)
 - [Local Development <a name="local-development"></a>](#local-development-)
-  - [Styles](#styles)
-  - [Modifying scopes](#modifying-scopes)
-  - [Calling server-side Google Apps Script functions](#calling-server-side-google-apps-script-functions)
+- [Styles](#styles)
+- [Modifying scopes](#modifying-scopes)
+- [Calling server-side Google Apps Script functions](#calling-server-side-google-apps-script-functions)
 
 <br/>
 
@@ -34,11 +28,11 @@ See [deploy](#deploy) for notes on how to deploy the project and see it live in 
 
 - You'll need to enable the Google Apps Script API. You can do that by visiting [script.google.com/home/usersettings](https://script.google.com/home/usersettings).
 
-- [New!] To use live reload while developing, you'll need to serve your files locally using HTTPS. See [local development](#local-development) below for how to set up your local environment.
+- To use live reload while developing, you'll need to serve your files locally using HTTPS. See [local development](#local-development) below for how to set up your local environment.
 
 ### Getting started <a name = "getting-started"></a>
 
-**1.** First, let's clone the repo and install the dependencies.
+**1.** First, clone the repo and install the dependencies.
 
 ```bash
 git clone git@github.com:IgorShcherba/gslides-plugin.git
@@ -52,9 +46,7 @@ npm install
 npm run login
 ```
 
-<img width="100%" src="https://i.imgur.com/zKCgkMl.gif">
-
-**3.** Now let's run the setup script to create a New Google Slides project and script project from the command line.
+**3.** Now let's run the setup script, this creates a New Google Slides project and script project from the command line.
 
 ```bash
 npm run setup
@@ -97,7 +89,7 @@ npm run deploy
 
 The deploy command will build all necessary files using production settings, including all server code (Google Apps Script code), client code (React bundle), and config files. All bundled files will be outputted to the `dist/` folder, then pushed to the Google Apps Script project.
 
-Now open Google Slides and find your plugin's menu item in the top menu. You can also run `npm run open`. Make sure to refresh the page if you already had it open.
+Now open Google Slides and find your plugin's menu item. You can also run `npm run open`. Make sure to refresh the page if you already had it open.
 
 <br/>
 
@@ -142,7 +134,7 @@ The start command will create and deploy a development build, and serve your loc
 
 After running the start command, navigate to your Google Slides project and open one up your add-on. It should now be serving your local files. When you make and save changes to your React app, your app will reload instantly within the Google Slides, and have access to any server-side functions!
 
-### Styles
+## Styles
 
 By default this project supports global CSS stylesheets. Make sure to import your stylesheet in your entrypoint file [index.js](./src/client/dialog-demo/index.js):
 
@@ -154,12 +146,12 @@ Many external component libraries require a css stylesheet in order to work prop
 
 The webpack.config.js file can also be modified to support scss and other style libraries.
 
-### Modifying scopes
+## Modifying scopes
 
 The included app only requires access to Google Slides and to loading dialog windows. If you make changes to the app's requirements make sure to edit the oauthScopes in the [appscript.json file](./appsscript.json).
 See https://developers.google.com/apps-script/manifest for information on the `appsscript.json` structure.
 
-### Calling server-side Google Apps Script functions
+## Calling server-side Google Apps Script functions
 
 This project uses the [gas-client](https://github.com/enuchi/gas-client) package to more easily call server-side functions using promises.
 
