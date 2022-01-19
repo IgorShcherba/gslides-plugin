@@ -4,3 +4,4 @@ import * as publicUiFunctions from './ui';
 global.onOpen = publicUiFunctions.onOpen;
 
 global.openSidebar = publicUiFunctions.openSidebar;
+global.openModal = publicUiFunctions.openModal;

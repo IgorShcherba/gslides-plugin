@@ -48,6 +48,12 @@ const clientEntrypoints = [
     filename: 'sidebar',
     template: './src/client/sidebar/index.html',
   },
+  {
+    name: 'CLIENT - HelpModal',
+    entry: './src/client/modal/index.js',
+    filename: 'modal',
+    template: './src/client/modal/index.html',
+  },
 ];
 
 // define certificate locations
