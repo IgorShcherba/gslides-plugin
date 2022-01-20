@@ -1,0 +1,48 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.input {
+  appearance: none;
+  border: none;
+  height: 38px;
+  border-radius: 0;
+  border-bottom: 1px solid rgb(217, 217, 217);
+  font-size: 1rem;
+  padding: 6px;
+}
+
+.input:focus-visible,
+.input:focus {
+  outline: 0;
+  border-bottom: 1px solid darkblue;
+}
+
+.select {
+  height: 38px;
+  font-size: 1rem;
+  border-radius: 6px;
+
+  border-color: rgb(217, 217, 217);
+}
+
+.container {
+  padding: 1rem;
+}
+
+.title {
+  min-height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.input-control-hotizontal {
+  display: flex;
+  align-items: flex-end;
+}
+.input-control-hotizontal .input {
+  flex: 1 1;
+}

@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 /**
- * This function is invoked when a User opens Google Slide and the add-on has been installed.
- * It adds menu items for the add-on
+ * Executes when a user opens a presentation
+ * @param {Event} event The open event.
  */
-export const onOpen = () => {
+export const onOpen = event => {
   const menu = SlidesApp.getUi()
     .createMenu('✌ Rashomon ✌') // edit me!
     .addItem('Open Rashomon Add-on', 'openSidebar')
@@ -10,6 +11,15 @@ export const onOpen = () => {
     .addItem('Help', 'openModal');
 
   menu.addToUi();
+};
+
+/**
+ * Executes when a user installs the add-on.
+ * We call onOpen here so that the add-on menu appears immediately after installation without requiring the user to refresh the page
+ * @param {Event} event The install event.
+ */
+export const onInstall = () => {
+  onOpen();
 };
 
 export const openSidebar = () => {
