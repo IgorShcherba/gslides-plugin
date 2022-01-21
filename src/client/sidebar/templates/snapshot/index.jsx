@@ -6,6 +6,7 @@ const SnapshotTemplate = () => {
     <div>
       <Input
         className="duration-field"
+        hotizontal
         labelText="Duration"
         name="duration"
         type="number"

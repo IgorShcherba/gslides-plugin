@@ -77,6 +77,7 @@ const App = () => {
         onChange={onChangeSlideTitle}
         name="title"
         style={styles.input}
+        placeholder="Title"
       />
 
       <Select
